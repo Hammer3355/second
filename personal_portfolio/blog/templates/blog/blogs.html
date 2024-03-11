@@ -4,6 +4,7 @@
 {% block content %}
 
 <h1>Блог</h1>
+<h2 class="count">Постов: {{ blogs.count }}</h2>
 
 {% for blog in blogs %}
 <div class="element">
@@ -13,7 +14,7 @@
 		</a>
 	</h2>
 	<div class="blog_text">
-		<h5>{{ blog.date }}</h5>
+		<h5>{{ blog.date|date:'d.m.Y' }}</h5>
 		<p>{{ blog.description|truncatechars:360|striptags }}</p>
 	</div>
 </div>

@@ -7,6 +7,18 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+	<div class="menu">
+		<div class="wrap">
+			<div class="logo">
+				
+			</div>
+			
+		</div>
+		<ul>
+			<li><a href="{% url 'index' %}">Главная</a></li>
+			<li><a href="{% url 'blog:blogs' %}">Блог</a></li>
+		</ul>
+	</div>
 	<div class="content">
 		<div class="wrap">
 			{% block content %}
